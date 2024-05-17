@@ -11,12 +11,13 @@ const App = () => {
     const newArrayWithNumbers: number[] = [];
 
     do {
-      const getRandomNumber: number = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
+      const getRandomNumber = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
       if (!newArrayWithNumbers.includes(getRandomNumber)) {
         newArrayWithNumbers.push(getRandomNumber);
       }
     } while (newArrayWithNumbers.length < 5);
 
+    newArrayWithNumbers.sort((a: number, b: number) => a - b);
     setNumbers(newArrayWithNumbers);
   };
 
