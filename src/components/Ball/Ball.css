@@ -1,0 +1,16 @@
+.circle {
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(66, 218, 85, 0.51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle:hover {
+    background-color: rgba(66, 218, 150, 0.51);
+}
+
+

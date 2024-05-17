@@ -4,3 +4,19 @@
   padding: 2rem;
   text-align: center;
 }
+
+.balls {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px;
+}
+
+.ball-content {
+  border: 1px solid green;
+  width: 700px;
+  height: 400px;
+}
+
+.numberBtn {
+  margin: 70px 0 0 0;
+}

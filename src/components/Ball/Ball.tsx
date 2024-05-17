@@ -1,7 +1,14 @@
+import React from 'react';
+import './Ball.css';
 
-const Ball = () => {
+interface Props {
+  number: number;
+}
+
+const Ball: React.FC<Props> = ({number}) => {
   return (
-    <div>
+    <div className='circle'>
+      {number}
     </div>
   );
 };
