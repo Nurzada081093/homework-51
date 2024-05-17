@@ -12,11 +12,19 @@
 }
 
 .ball-content {
-  border: 1px solid green;
+  border: 1px solid transparent;
   width: 700px;
   height: 400px;
+  background: rgba(144, 255, 8, 0.37);
+  border-radius: 10px;
 }
 
 .numberBtn {
   margin: 70px 0 0 0;
+  border: 2px solid green;
+}
+
+.numberBtn:hover {
+  border: 2px solid transparent;
+  box-shadow: 2px 2px 2px 1px rgba(91, 115, 97, 0.73);
 }

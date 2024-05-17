@@ -7,26 +7,23 @@ const App = () => {
 
   const [numbersArray, setNumbers] = useState<number[]>([5, 11, 16, 23, 32]);
 
-  const getNewNumber = () => {
+  const getNewNumbers = () => {
     const newArrayWithNumbers: number[] = [];
 
-    for (let i = 0; i <= 4; i++) {
-      const getRandomNumber = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
-
-      if (newArrayWithNumbers[i] !== getRandomNumber) {
+    do {
+      const getRandomNumber: number = Math.floor(Math.random() * (36 - 5 + 1)) + 5;
+      if (!newArrayWithNumbers.includes(getRandomNumber)) {
         newArrayWithNumbers.push(getRandomNumber);
       }
-    }
+    } while (newArrayWithNumbers.length < 5);
 
     setNumbers(newArrayWithNumbers);
-
   };
-
 
   return (
     <>
       <div className='ball-content'>
-        <button className='numberBtn' onClick={getNewNumber}>New numbers</button>
+        <button className='numberBtn' onClick={getNewNumbers}>New numbers</button>
         <div className='balls'>
           {numbersArray.map((number, index) => (
             <Ball key={index} number={number}/>
